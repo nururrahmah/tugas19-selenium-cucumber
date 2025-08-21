@@ -45,8 +45,8 @@ jobs:
         with:
           name: cucumber-reports
           path: |
-            build/reports/
-            build/test-results/
+            build/reports/tests/
+            build/test-results/test/
           retention-days: 30
 
       - name: Publish Test Results
@@ -54,5 +54,7 @@ jobs:
         if: success() || failure()
         with:
           name: Cucumber Test Results
-          path: build/test-results/test/*.xml
+          path: build/test-results/test/TEST-*.xml
           reporter: java-junit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

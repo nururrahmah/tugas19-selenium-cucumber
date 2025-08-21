@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepDefinitions;
 
 
 import io.cucumber.java.en.Given;
@@ -6,11 +6,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import org.junit.Assert;
-import pages.ReqresApiPage;
+import pages.ReqResApiPage;
 
 public class ApiStepDefinitions {
 
-    ReqresApiPage reqresApiPage = new ReqresApiPage();
+    ReqResApiPage reqresApiPage = new ReqResApiPage();
     private String requestBody;
     private Response response;
 

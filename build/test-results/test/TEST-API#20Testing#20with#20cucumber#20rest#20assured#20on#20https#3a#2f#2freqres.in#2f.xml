@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="API Testing with cucumber rest assured on https://reqres.in/" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-08-21T08:25:08.752Z" hostname="N" time="18.227">
+  <properties/>
+  <testcase name="Verify get request single user" classname="API Testing with cucumber rest assured on https://reqres.in/" time="14.143"/>
+  <testcase name="Verify POST request new user" classname="API Testing with cucumber rest assured on https://reqres.in/" time="2.219"/>
+  <testcase name="Verify get request not existed user" classname="API Testing with cucumber rest assured on https://reqres.in/" time="1.864"/>
+  <system-out><![CDATA[
+Scenario: Verify get request single user                        # src/test/resources/features/api.feature:4
+  Given I set the GET request to "api/users/2"                  # stepDefinitions.ApiStepDefinitions.setupGETEndpoint(java.lang.String)
+{"data":{"id":2,"email":"janet.weaver@reqres.in","first_name":"Janet","last_name":"Weaver","avatar":"https://reqres.in/img/faces/2-image.jpg"},"support":{"url":"https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral","text":"Tired of writing endless social media content? Let Content Caddy generate it for you."}}
+  When I send the GET request                                   # stepDefinitions.ApiStepDefinitions.sendGetRequest()
+actual respond Code = 200
+  Then The response code should be 200                          # stepDefinitions.ApiStepDefinitions.verifyRespondCode(int)
+  And the response body should contain "janet.weaver@reqres.in" # stepDefinitions.ApiStepDefinitions.verifyRespondBodyContainsText(java.lang.String)
+
+Scenario: Verify POST request new user                  # src/test/resources/features/api.feature:11
+  Given I set the POST Request for endpoint "api/users" # stepDefinitions.ApiStepDefinitions.setupPOSTEndpoint(java.lang.String)
+  And the request body is:                              # stepDefinitions.ApiStepDefinitions.theRequestBodyIs(java.lang.String)
+{"name":"morpheus","job":"leader","id":"121","createdAt":"2025-08-21T08:25:24.765Z"}
+  When I send the POST Request                          # stepDefinitions.ApiStepDefinitions.iSendThePOSTRequest()
+actual respond Code = 201
+  Then The response code should be 201                  # stepDefinitions.ApiStepDefinitions.verifyRespondCode(int)
+  And the response body should contain "morpheus"       # stepDefinitions.ApiStepDefinitions.verifyRespondBodyContainsText(java.lang.String)
+
+Scenario: Verify get request not existed user                  # src/test/resources/features/api.feature:25
+  Given I set the GET request to "api/users/12323132131212313" # stepDefinitions.ApiStepDefinitions.setupGETEndpoint(java.lang.String)
+{"error":"Missing API key"}
+  When I send the GET request                                  # stepDefinitions.ApiStepDefinitions.sendGetRequest()
+actual respond Code = 401
+  Then The response code should be 401                         # stepDefinitions.ApiStepDefinitions.verifyRespondCode(int)
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 139.0.7258.138 (resolved driver for Chrome 139)
+[Test worker] INFO io.github.bonigarcia.wdm.online.Downloader - Downloading https://storage.googleapis.com/chrome-for-testing-public/139.0.7258.138/mac-arm64/chromedriver-mac-arm64.zip
+[Test worker] INFO io.github.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file chromedriver-mac-arm64.zip
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/nanda/.cache/selenium/chromedriver/mac-arm64/139.0.7258.138/chromedriver
+Aug 21, 2025 3:25:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 139
+Aug 21, 2025 3:25:21 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 139.0.7258.129. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 139.0.7258.138 (resolved driver for Chrome 139)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/nanda/.cache/selenium/chromedriver/mac-arm64/139.0.7258.138/chromedriver
+Aug 21, 2025 3:25:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 139
+Aug 21, 2025 3:25:23 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 139.0.7258.129. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 139.0.7258.138 (resolved driver for Chrome 139)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/nanda/.cache/selenium/chromedriver/mac-arm64/139.0.7258.138/chromedriver
+Aug 21, 2025 3:25:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 139
+Aug 21, 2025 3:25:25 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 139.0.7258.129. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>

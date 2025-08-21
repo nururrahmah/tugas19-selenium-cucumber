@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 
-public class ReqresApiPage {
+public class ReqResApiPage {
     private String baseUrl = "https://reqres.in/";
     private Response response;
 

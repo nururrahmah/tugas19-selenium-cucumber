@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">19.839s</div>
+<div class="counter">19.936s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,17 +82,17 @@
 </thead>
 <tr>
 <td class="success">Login dengan data benar (positif)</td>
-<td class="success">5.914s</td>
+<td class="success">6.500s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Login dengan data salah (negatif)</td>
-<td class="success">7.627s</td>
+<td class="success">7.458s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Login dengan username kosong (batas)</td>
-<td class="success">6.298s</td>
+<td class="success">5.978s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -111,7 +111,7 @@ Scenario: Login dengan data salah (negatif)                     # src/test/resou
   Given saya berada di halaman login                            # stepDefinitions.LoginSteps.saya_di_login_page()
   When saya memasukkan username &quot;tomsmith&quot; dan password &quot;wrong&quot; # stepDefinitions.LoginSteps.input_credentials(java.lang.String,java.lang.String)
   And saya klik tombol login                                    # stepDefinitions.LoginSteps.klik_login()
-  Then saya melihat pesan error &quot;Your username is invalid!&quot;     # stepDefinitions.LoginSteps.melihat_pesan_error(java.lang.String)
+  Then saya melihat pesan error &quot;Your password is invalid!&quot;     # stepDefinitions.LoginSteps.melihat_pesan_error(java.lang.String)
 
 Scenario: Login dengan username kosong (batas)              # src/test/resources/features/login.feature:15
   Given saya berada di halaman login                        # stepDefinitions.LoginSteps.saya_di_login_page()
@@ -126,21 +126,21 @@ Scenario: Login dengan username kosong (batas)              # src/test/resources
 <span class="code">
 <pre>[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 139.0.7258.138 (resolved driver for Chrome 139)
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/nanda/.cache/selenium/chromedriver/mac-arm64/139.0.7258.138/chromedriver
-Aug 21, 2025 3:25:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Aug 21, 2025 3:38:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 139
-Aug 21, 2025 3:25:27 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Aug 21, 2025 3:38:57 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 139.0.7258.129. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 139.0.7258.138 (resolved driver for Chrome 139)
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/nanda/.cache/selenium/chromedriver/mac-arm64/139.0.7258.138/chromedriver
-Aug 21, 2025 3:25:33 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Aug 21, 2025 3:39:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 139
-Aug 21, 2025 3:25:33 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Aug 21, 2025 3:39:03 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 139.0.7258.129. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 139.0.7258.138 (resolved driver for Chrome 139)
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/nanda/.cache/selenium/chromedriver/mac-arm64/139.0.7258.138/chromedriver
-Aug 21, 2025 3:25:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Aug 21, 2025 3:39:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 139
-Aug 21, 2025 3:25:41 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Aug 21, 2025 3:39:11 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 139.0.7258.129. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 </pre>
 </span>
@@ -153,7 +153,7 @@ WARNING: Unable to find version of CDP to use for 139.0.7258.129. You may need t
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14</a> at 21 Aug 2025, 15.25.47</p>
+<a href="https://www.gradle.org">Gradle 8.14</a> at 21 Aug 2025, 15.39.17</p>
 </div>
 </div>
 </body>

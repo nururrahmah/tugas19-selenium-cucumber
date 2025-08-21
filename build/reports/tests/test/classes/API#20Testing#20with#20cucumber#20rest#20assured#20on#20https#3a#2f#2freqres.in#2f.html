@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">18.226s</div>
+<div class="counter">6.454s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,17 +82,17 @@
 </thead>
 <tr>
 <td class="success">Verify POST request new user</td>
-<td class="success">2.219s</td>
+<td class="success">1.899s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Verify get request not existed user</td>
-<td class="success">1.864s</td>
+<td class="success">1.797s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Verify get request single user</td>
-<td class="success">14.143s</td>
+<td class="success">2.758s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -112,7 +112,7 @@ actual respond Code = 200
 Scenario: Verify POST request new user                  # src/test/resources/features/api.feature:11
   Given I set the POST Request for endpoint &quot;api/users&quot; # stepDefinitions.ApiStepDefinitions.setupPOSTEndpoint(java.lang.String)
   And the request body is:                              # stepDefinitions.ApiStepDefinitions.theRequestBodyIs(java.lang.String)
-{&quot;name&quot;:&quot;morpheus&quot;,&quot;job&quot;:&quot;leader&quot;,&quot;id&quot;:&quot;121&quot;,&quot;createdAt&quot;:&quot;2025-08-21T08:25:24.765Z&quot;}
+{&quot;name&quot;:&quot;morpheus&quot;,&quot;job&quot;:&quot;leader&quot;,&quot;id&quot;:&quot;71&quot;,&quot;createdAt&quot;:&quot;2025-08-21T08:38:54.748Z&quot;}
   When I send the POST Request                          # stepDefinitions.ApiStepDefinitions.iSendThePOSTRequest()
 actual respond Code = 201
   Then The response code should be 201                  # stepDefinitions.ApiStepDefinitions.verifyRespondCode(int)
@@ -131,24 +131,22 @@ actual respond Code = 401
 <h2>Standard error</h2>
 <span class="code">
 <pre>[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 139.0.7258.138 (resolved driver for Chrome 139)
-[Test worker] INFO io.github.bonigarcia.wdm.online.Downloader - Downloading https://storage.googleapis.com/chrome-for-testing-public/139.0.7258.138/mac-arm64/chromedriver-mac-arm64.zip
-[Test worker] INFO io.github.bonigarcia.wdm.online.Downloader - Extracting driver from compressed file chromedriver-mac-arm64.zip
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/nanda/.cache/selenium/chromedriver/mac-arm64/139.0.7258.138/chromedriver
-Aug 21, 2025 3:25:21 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Aug 21, 2025 3:38:51 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 139
-Aug 21, 2025 3:25:21 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Aug 21, 2025 3:38:51 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 139.0.7258.129. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 139.0.7258.138 (resolved driver for Chrome 139)
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/nanda/.cache/selenium/chromedriver/mac-arm64/139.0.7258.138/chromedriver
-Aug 21, 2025 3:25:23 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Aug 21, 2025 3:38:53 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 139
-Aug 21, 2025 3:25:23 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Aug 21, 2025 3:38:53 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 139.0.7258.129. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 139.0.7258.138 (resolved driver for Chrome 139)
 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/nanda/.cache/selenium/chromedriver/mac-arm64/139.0.7258.138/chromedriver
-Aug 21, 2025 3:25:25 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Aug 21, 2025 3:38:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 139
-Aug 21, 2025 3:25:25 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+Aug 21, 2025 3:38:55 PM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
 WARNING: Unable to find version of CDP to use for 139.0.7258.129. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.0` where the version (&quot;v86&quot;) matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 </pre>
 </span>
@@ -161,7 +159,7 @@ WARNING: Unable to find version of CDP to use for 139.0.7258.129. You may need t
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="https://www.gradle.org">Gradle 8.14</a> at 21 Aug 2025, 15.25.47</p>
+<a href="https://www.gradle.org">Gradle 8.14</a> at 21 Aug 2025, 15.39.17</p>
 </div>
 </div>
 </body>

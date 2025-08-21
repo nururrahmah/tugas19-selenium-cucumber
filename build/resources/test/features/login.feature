@@ -10,7 +10,7 @@ Feature: Login Functionality
     Given saya berada di halaman login
     When saya memasukkan username "tomsmith" dan password "wrong"
     And saya klik tombol login
-    Then saya melihat pesan error "Your username is invalid!"
+    Then saya melihat pesan error "Your password is invalid!"
 
   Scenario: Login dengan username kosong (batas)
     Given saya berada di halaman login

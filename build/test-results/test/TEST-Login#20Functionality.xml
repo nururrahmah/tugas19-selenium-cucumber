@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Login Functionality" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-08-21T03:54:02.907Z" hostname="NR" time="18.894">
+  <properties/>
+  <testcase name="Login dengan data benar (positif)" classname="Login Functionality" time="6.931"/>
+  <testcase name="Login dengan data salah (negatif)" classname="Login Functionality" time="5.868"/>
+  <testcase name="Login dengan username kosong (batas)" classname="Login Functionality" time="6.094"/>
+  <system-out><![CDATA[
+Scenario: Login dengan data benar (positif)                                    # src/test/resources/features/login.feature:3
+  Given saya berada di halaman login                                           # stepDefinitions.LoginSteps.saya_di_login_page()
+  When saya memasukkan username "tomsmith" dan password "SuperSecretPassword!" # stepDefinitions.LoginSteps.input_credentials(java.lang.String,java.lang.String)
+  And saya klik tombol login                                                   # stepDefinitions.LoginSteps.klik_login()
+  Then saya berhasil login ke halaman dashboard                                # stepDefinitions.LoginSteps.berhasil_login()
+
+Scenario: Login dengan data salah (negatif)                     # src/test/resources/features/login.feature:9
+  Given saya berada di halaman login                            # stepDefinitions.LoginSteps.saya_di_login_page()
+  When saya memasukkan username "tomsmith" dan password "wrong" # stepDefinitions.LoginSteps.input_credentials(java.lang.String,java.lang.String)
+  And saya klik tombol login                                    # stepDefinitions.LoginSteps.klik_login()
+  Then saya melihat pesan error "Your username is invalid!"     # stepDefinitions.LoginSteps.melihat_pesan_error(java.lang.String)
+
+Scenario: Login dengan username kosong (batas)              # src/test/resources/features/login.feature:15
+  Given saya berada di halaman login                        # stepDefinitions.LoginSteps.saya_di_login_page()
+  When saya memasukkan username "" dan password "12345"     # stepDefinitions.LoginSteps.input_credentials(java.lang.String,java.lang.String)
+  And saya klik tombol login                                # stepDefinitions.LoginSteps.klik_login()
+  Then saya melihat pesan error "Your username is invalid!" # stepDefinitions.LoginSteps.melihat_pesan_error(java.lang.String)
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 139.0.7258.138 (resolved driver for Chrome 139)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nnnur\.cache\selenium\chromedriver\win64\139.0.7258.138\chromedriver.exe
+Aug 21, 2025 10:54:04 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 139
+Aug 21, 2025 10:54:04 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 139.0.7258.128. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 139.0.7258.138 (resolved driver for Chrome 139)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nnnur\.cache\selenium\chromedriver\win64\139.0.7258.138\chromedriver.exe
+Aug 21, 2025 10:54:10 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 139
+Aug 21, 2025 10:54:10 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 139.0.7258.128. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 139.0.7258.138 (resolved driver for Chrome 139)
+[Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\nnnur\.cache\selenium\chromedriver\win64\139.0.7258.138\chromedriver.exe
+Aug 21, 2025 10:54:16 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 139
+Aug 21, 2025 10:54:16 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 139.0.7258.128. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.23.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>

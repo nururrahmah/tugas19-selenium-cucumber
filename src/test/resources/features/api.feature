@@ -1,4 +1,4 @@
-Feature: API Testing with cucumber rest assured on https://reqres.in/
+Feature: API Testing with cucumber rest assured on reqres.in
 
  # positive case
   Scenario: Verify get request single user
